@@ -1,1 +1,1 @@
-the fprint file
+using the fput function
