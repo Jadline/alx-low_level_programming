@@ -1,1 +1,1 @@
-territories doesnt make a nation
+the intel syntax
