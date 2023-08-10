@@ -1,1 +1,1 @@
-using the puts function
+using the printf function
