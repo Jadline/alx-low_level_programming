@@ -1,1 +1,1 @@
-using the printf function
+territories doesnt make a nation
