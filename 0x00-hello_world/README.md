@@ -1,1 +1,1 @@
-making the file executable
+using the puts function
