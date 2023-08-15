@@ -2,7 +2,7 @@
 /**
  * _islower - This function checks for lowercase letters
  *
- * @c - Variable name
+ * @c: Variable name
  *Return: Always 0 (Success)
  */
 int _islower(int c)
