@@ -1,6 +1,4 @@
-#include <stdio.h>
-int _putchar(char c);
-
+#include "main.h"
 /**
  * main - printing a message to the screen
  *
