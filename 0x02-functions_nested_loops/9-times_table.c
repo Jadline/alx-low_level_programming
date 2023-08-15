@@ -6,6 +6,7 @@
 void times_table(void)
 {
 	int k, p, z;
+
 	for (k = 0; k <= 9; k++)
 	{
 		_putchar(48);
@@ -15,9 +16,9 @@ void times_table(void)
 			_putchar(' ');
 
 			z = k * p;
-			if ( z <= 9)
+			if (z <= 9)
 				_putchar(' ');
-			else 
+			else
 				_putchar ((z / 10) + 48);
 			_putchar((z % 10) + 48);
 		}
