@@ -12,8 +12,8 @@ int main(void)
 
 	for (z = 0; z < 1024; z++)
 	{
-		if ((num % 3 == 0) || (num % 5 == 0))
-			p == z;
+		if ((z % 3 == 0) || (z % 5 == 0))
+			p += z;
 	}
 	printf("%d\n", p);
 	return (0);
