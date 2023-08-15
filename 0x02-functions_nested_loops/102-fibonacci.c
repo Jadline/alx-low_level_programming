@@ -10,7 +10,7 @@
 int main(void)
 {
 	unsigned long fibon1 = 0, fibon2 = 1, sum;
-	unsigned long total_sum = 0;
+	float total_sum = 0;
 
 	while (1)
 	{
