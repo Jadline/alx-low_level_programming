@@ -37,15 +37,15 @@ int main(void)
 	{
 		if (fib10 > 0)
 			printf("%lu", fib10);
-		z = numL(m) - 1 - numL(fib1);
+		z = numL(m) - 1 - numL(fb1);
 		while (fib10 > 0 && z > 0)
 		{
 			printf("%d", 0);
 			z--;
 		}
 		printf("%lu", fb1);
-		sum = (fb1 + f2) % m;
-		sum1 = fib10 + fib20 + (fb1 + f2) / m;
+		s = (fb1 + f2) % m;
+		s1 = fib10 + fib20 + (fb1 + f2) / m;
 		fb1 = f2;
 		fib10 = fib20;
 		f2 = s;
