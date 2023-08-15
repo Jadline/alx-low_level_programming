@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * numL - return the length of string
  * @k: Variable names
