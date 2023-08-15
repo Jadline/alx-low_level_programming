@@ -8,7 +8,8 @@
  */
 int main(void)
 {
-	int p, z;
+	int p = 0;
+	int z;
 
 	for (z = 0; z < 1024; z++)
 	{
