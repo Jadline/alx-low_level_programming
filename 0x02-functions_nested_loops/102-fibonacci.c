@@ -10,7 +10,7 @@
 int main(void)
 {
 	unsigned long fibon1 = 0, fibon2 = 1, sum;
-	float total_sum = 0;
+	unsigned long  total_sum = 0;
 
 	while (1)
 	{
@@ -23,6 +23,6 @@ int main(void)
 		fibon1 = fibon2;
 		fibon2 = sum;
 	}
-	printf("%.0f\n", total_sum);
+	printf("%lu\n", total_sum);
 	return (0);
 }
