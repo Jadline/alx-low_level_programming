@@ -9,20 +9,20 @@
  */
 int main(void)
 {
+	int i;
 	unsigned long fibon1 = 0, fibon2 = 1, sum;
-	unsigned long  total_sum = 0;
 
-	while (1)
+	for (i = 0; i < 50; i++)
 	{
 		sum = fibon1 + fibon2;
-		if (sum > 4000000)
-			break;
-		if ((sum % 2) == 0)
-			total_sum += sum;
+		printf("%lu", sum);
 
 		fibon1 = fibon2;
 		fibon2 = sum;
+		if (i == 49)
+			printf("\n");
+		else
+			printf(",");
 	}
-	printf("%lu\n", total_sum);
 	return (0);
 }
