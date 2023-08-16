@@ -7,21 +7,19 @@
  */
 int main(void)
 {
-	int k;
-	unsigned long fibon1 = 0, fibon2 = 1, sum;
+	unsigned long count = 0;
+	unsigned long fibon1 = 0, fibon2, sum;
 
-	for (k = 0; k < 10; k++)
+	for (fibon2 = 1; fibon2 < 4000000 ; fibon2++)
 	{
 		sum = fibon1 + fibon2;
-		printf("%lu", sum);
 
 		fibon1 = fibon2;
 		fibon2 = sum;
 
-		if (k == 49)
-			printf("\n");
-		else
-			printf(",");
+		if (sum % 2 == 0)
+			count += sum;
 	}
+	printf("%lu\n", count);
 	return (0);
 }
