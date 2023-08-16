@@ -52,8 +52,8 @@ int main(void)
 		fib20 = s1;
 		if (p != 98)
 		{
-			printf(" ");
 			printf(",");
+			printf(" ");
 		}
 		else
 			printf("\n");
