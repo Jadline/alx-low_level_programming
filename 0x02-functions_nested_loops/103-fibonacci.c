@@ -8,9 +8,9 @@
 int main(void)
 {
 	unsigned long count = 0;
-	unsigned long fibon1 = 0, fibon2, sum;
+	unsigned long fibon1 = 0, fibon2 = 1, sum;
 
-	for (fibon2 = 1; fibon2 < 4000000 ; fibon2++)
+	while (fibon2 <= 4000000)
 	{
 		sum = fibon1 + fibon2;
 
