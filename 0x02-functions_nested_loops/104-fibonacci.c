@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h"i
 #include <stdio.h>
 /**
  * numL - return the length of string
