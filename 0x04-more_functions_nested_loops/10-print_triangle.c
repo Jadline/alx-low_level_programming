@@ -12,24 +12,19 @@ void print_triangle(int size)
 	}
 	else
 	{
-		int k;
-		int p;
+		int r, h, s;
 
-		for (k = 1; k <= size; k++)
+		for (r = 1; r <= size; r++)
 		{
-			for (p = 1; p <= 2 * size - 1; p++)
+			for (s = size - r; s >= 1 ; s--)
 			{
-				if ((p >= size - (k - 1)) && (p <= size + (k - 1)))
-				{
-					_putchar('#');
-				}
-				else
-				{
-					_putchar(' ');
-				}
+				_putchar(' ');
+			}
+			for (h = 1; h <= r; h++)
+			{
+				_putchar('#');
 			}
 			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
