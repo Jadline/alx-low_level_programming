@@ -1,70 +1,51 @@
 #include "main.h"
-
 /**
-* rev_string - reverse string
-* @n: integer parameter
-* Return: Always 0 (Success)
-*/
-void rev_string(char *n)
-{
-	int k = 0;
-	int m = 0;
-	int p;
-
-	while (*(n + k) != '\0')
-	{
-		k++;
-	}
-	k--;
-	for (m = 0; m < k; m++, k--)
-	{
-		p = *(n + m);
-		*(n + m) = *(n + k);
-		*(n + k) = p;
-	}
-}
+ * infinite_add - function that adds two numbers
+ * @n1: pointer to first number
+ * @n2: pointer to second number
+ * @r: the function to store the results
+ * @size_r: buffer size
+ * Return: sum
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int overflow = 0, k = 0, m = 0, digits = 0;
-	int value1 = 0, value2 = 0, my_p = 0;
+	/* variable declaration */
+	int p = 0, q = 0, k, l = 0, f, z, d = 0;
 
-	while (*n1 != '\0')
-	{
-		k++;
-	}
-	while (*n2 != '\0')
-	{
-		m++;
-	}
-	k--;
-	m--;
-	if (m >= size_r || k >= size_r)
+	while (n1[p] != '\0')
+		p++;
+	while (n2[q] != '\0')
+		q++;
+	if (p > q)
+		l = p;
+	else
+		l = q;
+	if (l + 1 > size_r)
 		return (0);
-	while (m >= 0 || k >= 0 || overflow == 1)
+	r[1] = '\0';
+	for (k = l - 1; k >= 0; k--)
 	{
-		if (k < 0)
-			value1 = 0;
+		p--;
+		q--;
+		if (p >= 0)
+			f = n1[p] - '0';
 		else
-			value1 = *(n1 + k) - '0';
-		if (m < 0)
-			value2 = 0;
+			f = 0;
+		if (q >= 0)
+			z = n2[q] - '0';
 		else
-			value2 = *(n2 + m) - '0';
-		my_p = value1 + value2 + overflow;
-		if (my_p >= 10)
-			overflow = 1;
-		else
-			overflow = 0;
-		if (digits >= (size_r - 1))
+			z = 0;
+		r[k] = (f + z + d) % 10 + '0';
+		d = (f + z + d) / 10;
+	}
+	if (d == 1)
+	{
+		r[l + 1] = '\0';
+		if (l + 2 > size_r)
 			return (0);
-		*(r + digits) = (my_p % 10) + '0';
-		digits++;
-		m--;
-		k--;
+		while (l-- >= 0)
+			r[l + 1] = r[l];
+		r[0] = d + '0';
 	}
-	if (digits == size_r)
-		return (0);
-	*(r + digits) = '\0';
-	rev_string (r);
 	return (r);
 }
