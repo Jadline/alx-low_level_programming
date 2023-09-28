@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <math.h>
 #include "main.h"
 /**
  * binary_to_uint - this function returns the decimal representation
@@ -11,7 +9,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int length, sum, result, num;
+	unsigned int length, sum, result, num, k, output;
 
 	sum = 0;
 	if (b == NULL)
@@ -28,8 +26,13 @@ unsigned int binary_to_uint(const char *b)
 		else
 		{
 			num = *b - '0';
-			result = num * pow(2, length - 1);
-			sum += result;
+			result = 1;
+			for ( k = 0; k < length - 1; k++)
+			{
+				result *= 2;
+			}
+			output = num * result;
+			sum += output;
 		}
 		b++;
 		length--;
