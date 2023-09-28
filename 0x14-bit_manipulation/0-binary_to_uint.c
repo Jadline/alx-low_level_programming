@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			num = *b - '0';
 			result = 1;
-			for ( k = 0; k < length - 1; k++)
+			for (k = 0; k < length - 1; k++)
 			{
 				result *= 2;
 			}
